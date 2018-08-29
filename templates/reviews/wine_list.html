@@ -1,0 +1,23 @@
+{% extends 'reviews/base.html' %}
+
+{% load bootstrap3%}
+{% bootstrap_css %}
+
+{% block title %}
+<h2>Wine List</h2>
+{% endblock %}
+
+{% block content %}
+{% if wine_list %}
+<div>
+    {% for wine in wine_list %}
+    <div>
+        <h4><a href = "{% url 'reviews:wine_detail' wine.id%}">
+          {{wine.name}}</a></h4>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No wines are available.</p>
+{% endif %}
+{% endblock %}

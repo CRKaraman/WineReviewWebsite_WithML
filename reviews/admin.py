@@ -11,6 +11,7 @@ class WineAdmin(admin.ModelAdmin):
     inlines = [ReviewInline]
     search_fields = ['user_name']
     list_filter = ['review']
+    list_display = ('id','name')
 
 
 

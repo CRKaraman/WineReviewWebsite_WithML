@@ -32,6 +32,7 @@ SECRET_KEY = '=tsewyn&kuonlvnmfsuet)s*c*l(t$yy$0b)jkjorwv%#bol9w'
 DEBUG = True
 
 LOGIN_REDIRECT_URL = '/reviews/review/'
+SIMPLE_BACKEND_REDIRECT_URL = '/reviews/review/'
 
 ALLOWED_HOSTS = []
 

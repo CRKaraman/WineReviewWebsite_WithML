@@ -1,5 +1,6 @@
 from django.db import models
 import numpy as np
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -31,3 +32,10 @@ class Review(models.Model):
 
     def __str__(self):
         return self.comment
+
+class Cluster(models.Model):
+    name = models.CharField(max_length=100)
+    users = models.ManyToManyField(User)
+
+    def get_members(self):
+        return "\n".join([u.username for u in self.users.all()])

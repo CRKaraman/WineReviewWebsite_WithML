@@ -11,5 +11,6 @@ urlpatterns = [
     path('wine/<int:wine_id>/',views.wine_detail,name = 'wine_detail'),
     path('wine/<int:wine_id>/<int:review_id>',views.review_detail_of_wine,name = 'review_detail_of_wine'),
     path('wine/<int:wine_id>/add_review', views.add_review, name='add_review'),
-    path('user/<username>/',views.user_review_list,name = 'user_review_list'),
+    path('user/<username>/',views.user_review_list, name = 'user_review_list'),
+    path('recommendation/',views.user_recommendation_list, name = 'user_recommendation_list')
 ]

@@ -1,4 +1,4 @@
-{% extends 'reviews/base.html' %}
+{% extends 'base.html' %}
 {% load bootstrap3 %}
 
 {% block title %}
@@ -15,7 +15,7 @@
     <div class="col-xs-6 col-lg-4">
         <em>{{ review.comment }}</em>
         <h6>Rated {{ review.rating }} of 5 by {{ review.user_name }}</h6>
-        <h5><a href="{% url 'reviews:review_of_wine' wine.id review.id %}" class = reviewlink>
+        <h5><a href="{% url 'reviews:review_detail_of_wine' wine.id review.id %}" class = reviewlink>
         Read more
         </a></h5>
     </div>

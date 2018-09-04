@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+ACCOUNTS_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_ROGIN = True
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATICFILES_DIRS = (
@@ -28,6 +31,8 @@ SECRET_KEY = '=tsewyn&kuonlvnmfsuet)s*c*l(t$yy$0b)jkjorwv%#bol9w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+LOGIN_REDIRECT_URL = '/reviews/review/'
+
 ALLOWED_HOSTS = []
 
 
@@ -42,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap3',
     'reviews',
+    'registration'
 ]
 
 MIDDLEWARE = [
